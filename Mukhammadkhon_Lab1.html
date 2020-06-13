@@ -1,0 +1,70 @@
+<html>
+
+<body>
+    <script>
+        // Here we create a pop up message via declaring a variable and then alerting with the same variable.
+        var notifying = "Welcome to Shopping Cart Simulator 2020!";
+        alert(notifying);
+
+
+
+        var firstName = prompt("What is your First Name?", "John"); // prompt a message with a value
+        var lastName = prompt("What is your Last Name?", "Smith"); // prompt a message with a value
+        var email = prompt("What is your Email Address?", "sutent@fanshaweonline.ca"); // prompt a message with a value
+        var phone = prompt("What is your phone number?", "(555)-555-5555"); // prompt a message with a value
+
+
+        const HST_TAX = 0.13; // we declare a constant variable with a value of 0.13
+
+        //variable declared with a prompt also with a string and set price and parseFloat converts it to a floating point number 
+        var Item1 = parseFloat(prompt("Enter the price of Item 1", "25.50$"));
+        var Item2 = parseFloat(prompt("Enter the price of Item 2", "6.75$"));
+        var Item3 = parseFloat(prompt("Enter the price of Item 3", "17.35$"));
+
+
+
+        // variable declared to calculate the subTotal of the items and then rounded with Math.round
+        var subTotal = Item1 + Item2 + Item3;
+        subTotal = Math.round(subTotal);
+
+
+
+        // calculating the tax via multiplying subTotal and the tax constant variable and then rounding the number
+        var taxCalculation = subTotal * HST_TAX;
+        taxCalculation = Math.round(taxCalculation);
+
+        //calculate the TotalAmount through adding tax and subTotal amount and rounding the number in the end
+        var totalAmount = subTotal + taxCalculation;
+        totalAmount = Math.round(totalAmount);
+
+        // Displaying everything to the console via the string + variable name to display and + '\n' which creates a new line break so everything is on a new seperate line
+        console.log("Customer Full Name: " + firstName + ' ' + lastName + '\n' +
+            'Email: ' + email + '\n' + "Phone: " + phone + ' ' + '\n' + "Item 1: " + '$' + Item1 + ' ' + '\n' +
+            "Item 2: " + '$' + Item2 + ' ' + '\n' + "Item 3: " + '$' + Item3 + ' ' + '\n' + "SubTotal: " + '$' +
+            subTotal + ' ' + '\n' + "Tax: " + '$' +
+            taxCalculation + ' ' + '\n' + "Subtotal: " + '$' + totalAmount + ' ' + '\n');
+    </script>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
